@@ -68,7 +68,7 @@ body {
 /* 벚꽃 블라썸 (꽃잎/나뭇잎 느낌) */
 .blossom {
   position: fixed;
-  top: -10px;
+  top: -25px;
   width: 10px;
   height: 14px;
   background: #f8c9dc;

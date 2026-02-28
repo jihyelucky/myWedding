@@ -71,9 +71,34 @@ export default function Home() {
 
           <button
             onClick={handleToggle}
-            className="rounded-full bg-white/60 p-2 text-xs text-zinc-400 shadow-sm w-8 h-8"
+            className="rounded-full bg-white/60 p-2 shadow-sm"
           >
-            {isPlaying ? "⏸" : "▶"}
+            {isPlaying ? (
+              // 정지 아이콘
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <rect
+                  x="6"
+                  y="5"
+                  width="4"
+                  height="14"
+                  rx="1.5"
+                  fill="#9ca3af"
+                />
+                <rect
+                  x="14"
+                  y="5"
+                  width="4"
+                  height="14"
+                  rx="1.5"
+                  fill="#9ca3af"
+                />
+              </svg>
+            ) : (
+              // 재생 아이콘
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <path d="M8 5.5L17 12L8 18.5V5.5Z" fill="#9ca3af" />
+              </svg>
+            )}
           </button>
 
           <audio ref={audioRef} src={MUSIC_URL} />
