@@ -13,12 +13,12 @@ const WEDDING_INFO = {
     {
       bank: "우체국",
       account: "01334202338219",
-      name: "신부측 이진석",
+      name: "신부측 父・이진석",
     },
     {
       bank: "농협은행",
       account: "10003052108085",
-      name: "신부측 김향숙",
+      name: "신부측 母・김향숙",
     },
     {
       bank: "우리은행",
@@ -199,6 +199,8 @@ export default function Home() {
               className="flex items-center justify-between gap-2 bg-white/80 px-3 py-2 text-xs text-zinc-800"
             >
               <span className="truncate">
+                {info.name}
+                <br />
                 {info.bank} {info.account}
               </span>
               <button
